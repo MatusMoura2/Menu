@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Especial</th>
+                <th>Dia da Semana</th>
+                <th>Refeição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="menu : ${menus}">
+                <td th:text="${menu.name}">Nome</td>
+                <td th:text="${menu.description}">Descrição</td>
+                <td th:text="${menu.price}">Preço</td>
+                <td th:text="${menu.special ? 'Sim' : 'Não'}">Especial</td>
+                <td th:text="${menu.dayWeek}">Dia da Semana</td>
+                <td th:text="${menu.snack}">Refeição</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

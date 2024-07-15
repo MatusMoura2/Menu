@@ -19,6 +19,7 @@ public class Menu {
 		private boolean special;
 		private String dayWeek;
 		private String snack;
+		
 		public Menu(UUID id, String name, String description, double price, boolean special, String dayWeek,
 				String snack) {
 			super();

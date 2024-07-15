@@ -3,11 +3,16 @@ package com.mouraforte.menu.service;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.mouraforte.menu.entity.Menu;
 import com.mouraforte.menu.repository.MenuRepository;
 
+@Service
 public class MenuServiceImpl implements MenuService{
 	
+	@Autowired
 	private MenuRepository repository;
 
 	@Override
